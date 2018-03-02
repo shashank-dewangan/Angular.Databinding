@@ -14,10 +14,7 @@ export class ProductListComponent  {
 private products: any;
 
   constructor(private svc: ProductService,private logger : LoggerService) { 
-    logger.error("custome error");
-    logger.log("custom log");
-    logger.warn("warning");
-    
+
     svc.get().subscribe(
       result => this.products = result,
       err => console.log(err),

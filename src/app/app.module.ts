@@ -1,3 +1,4 @@
+import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { SharedModule } from './module/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,12 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { CustomRouterModule } from './module/custom-router.module';
 
-const ROUTE: Route[] = [
-  {path: '',component: HomeComponent},
-  {path: 'about',component: AboutComponent},
-  {path: 'contact',component:ContactComponent},
-{path: 'products', component:ProductListComponent}];
 
 @NgModule({
   declarations: [AppComponent,
@@ -26,8 +23,8 @@ const ROUTE: Route[] = [
     FooterComponent, 
     HomeComponent, 
     ContactComponent, 
-    AboutComponent],
-  imports: [BrowserModule,HttpClientModule,SharedModule,RouterModule.forRoot(ROUTE)],
+    AboutComponent, ProductdetailComponent],
+  imports: [BrowserModule,HttpClientModule,SharedModule,CustomRouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
