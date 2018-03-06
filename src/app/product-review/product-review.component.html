@@ -1,0 +1,12 @@
+<h2>
+ <div *ngFor="let review of reviews">
+    <div class="panel panel-danger">    
+        <div class="panel-heading"><h4><strong>Name : </strong>{{review.Name}}</h4></div>  
+        <div class ="panel-body">
+    <div><h4><strong>Rating : </strong>{{review.Rating}}</h4></div>
+    <div><h4><strong>Subject : </strong>{{review.Subject}}</h4></div>
+    <div><h4><strong>Message : </strong>{{review.Message}}</h4></div>
+    </div>  
+    </div>  
+   </div>
+</h2>

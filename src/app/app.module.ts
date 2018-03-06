@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { CustomRouterModule } from './module/custom-router.module';
+import { ProductNewComponent } from './product-new/product-new.component';
+import { ProductSpecComponent } from './product-spec/product-spec.component';
+import { ProductReviewComponent } from './product-review/product-review.component';
 
 
 @NgModule({
@@ -23,7 +26,7 @@ import { CustomRouterModule } from './module/custom-router.module';
     FooterComponent, 
     HomeComponent, 
     ContactComponent, 
-    AboutComponent, ProductdetailComponent],
+    AboutComponent, ProductdetailComponent, ProductNewComponent, ProductSpecComponent, ProductReviewComponent],
   imports: [BrowserModule,HttpClientModule,SharedModule,CustomRouterModule],
   providers: [],
   bootstrap: [AppComponent]

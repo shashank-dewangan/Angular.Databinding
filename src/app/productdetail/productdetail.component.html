@@ -1,9 +1,40 @@
 
-<div *ngIf="product" class="well ">
+<div *ngIf="product">
     <div class="panel panel-success ">     
         <div class="panel-heading"><h2>{{product.Brand}}</h2> <h4> {{product.Model | uppercase}} </h4></div>
         <div class ="panel-body"><h4>Price : {{product.Price | currency}}</h4>
         <h4>In Stock : <input type="checkbox" disabled=true [checked]="product.InStock" /> </h4></div>
         <div class = "panel-footer text-success">Date Purchased : {{product.LastUpdated | date : "dd/MMM/yyyy hh:mm"}}</div>
+        
+        
         </div>
+        <div>
+         <ul class="nav-tabs nav">
+           <li routerLinkActive="active"><a routerLink="specs">specs</a></li>
+           <li routerLinkActive="active"><a routerLink="reviews">reviews</a></li>
+         </ul>
+         <div>
+           <router-outlet></router-outlet>
+         </div>
+        </div>
+        <!-- <div *ngIf="product.Reviews" >
+          <div class="col-md-10">
+              <ul class="nav-tabs nav">
+                  <li class="active"><a href="#tabReview" data-toggle="tab">Reviews</a> </li>
+                  <li ><a href="" data-toggle="tab">Specification</a> </li>
+              </ul>
+              <div class="tab-content">
+              <div id="tabReview" class="tab-pane active">
+                      <div *ngFor="let review of product.Reviews">
+                            <div><h4><strong>Rating : </strong>{{review.Rating}}</h4></div>
+                            <div><h4><strong>Name : </strong>{{review.Name}}</h4></div>
+                            <div><h4><strong>Subject : </strong>{{review.Subject}}</h4></div>
+                            <div><h4><strong>Message : </strong>{{review.Message}}</h4></div>
+                          </div></div>    
+              </div>      
+           
+            </div>
+          </div> -->
       </div>
+      <br />
+      <br />

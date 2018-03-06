@@ -14,7 +14,9 @@ export class ProductdetailComponent {
   {
     let id = this.router.snapshot.params.id;
     svc.getById(id).subscribe(
-      (result) => this.product = result,
+      (result) => {
+        this.svc.reviews = result["Reviews"];
+        this.product = result},
       (err)=> logger.error(err),
       ()=>logger.log("Completed")
     )
