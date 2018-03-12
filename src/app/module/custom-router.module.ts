@@ -8,6 +8,7 @@ import { AboutComponent } from './../about/about.component';
 import { HomeComponent } from './../home/home.component';
 import { Route, RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
+import { ProductResolver } from '../Services/product.resolver';
 
 const CHILDREN : Route[] = [
     {path: 'specs', component: ProductSpecComponent},

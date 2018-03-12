@@ -1,13 +1,17 @@
 import { ProductService } from './../Services/product.service';
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-review',
   templateUrl: './product-review.component.html',
 })
-export class ProductReviewComponent {
+export class ProductReviewComponent implements OnInit {
+  
   reviews:any[];
   constructor(private svc: ProductService){
-this.reviews = svc.reviews;
+  }
+
+  ngOnInit(): void {
+    this.reviews = this.svc.reviews;
   }
 }
